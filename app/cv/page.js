@@ -10,43 +10,7 @@ export default function Home() {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen">
-      {/* Header */}
-      <header className="bg-gray-900 text-white py-4 px-6 md:px-20 shadow-md fixed w-full top-0 z-50">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <h1 className="text-xl font-bold">Iqbal's CV</h1>
-
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex gap-6">
-          <Link href="/cv" className="hover:text-yellow-400">Home</Link>
-            <Link href="/about" className="hover:text-yellow-400">About</Link>
-            <Link href="/skills" className="hover:text-yellow-400">Skills</Link>
-            <Link href="/portfolio" className="hover:text-yellow-400">Portfolio</Link>
-            <Link href="/services" className="hover:text-yellow-400">Layanan</Link>
-            <Link href="/contact" className="hover:text-yellow-400">Kontak</Link>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={() => setMenuOpen(!menuOpen)} 
-            className="md:hidden text-white focus:outline-none"
-          >
-            {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu (Dropdown) */}
-        {menuOpen && (
-          <nav className="md:hidden absolute top-full left-0 w-full bg-gray-800 p-4 flex flex-col items-center">
-            <Link href="/about" className="py-2 hover:text-yellow-400" onClick={() => setMenuOpen(false)}>About</Link>
-            <Link href="/skills" className="py-2 hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Skills</Link>
-            <Link href="/portfolio" className="py-2 hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Portfolio</Link>
-            <Link href="/services" className="py-2 hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Layanan</Link>
-            <Link href="/contact" className="py-2 hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Kontak</Link>
-          </nav>
-        )}
-      </header>
-
+      
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6">
         <Image 
